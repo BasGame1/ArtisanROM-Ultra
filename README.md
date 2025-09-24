@@ -4,18 +4,18 @@
   <img loading="eager" src="readme-res/banner.png"/>
 </h1>
 <p align="center">
-  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/blob/fifteen/LICENSE"><img loading="lazy" src="https://img.shields.io/github/license/ArtisanROM/ExtremeROM-UltraLegacy?style=for-the-badge&logo=github"/></a>
-  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/commits/fifteen"><img loading="lazy" src="https://img.shields.io/github/last-commit/ArtisanROM/ExtremeROM-UltraLegacy/fifteen?style=for-the-badge"/></a>
+  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/blob/sixteen/LICENSE"><img loading="lazy" src="https://img.shields.io/github/license/ArtisanROM/ExtremeROM-UltraLegacy?style=for-the-badge&logo=github"/></a>
+  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/commits/sixteen"><img loading="lazy" src="https://img.shields.io/github/last-commit/ArtisanROM/ExtremeROM-UltraLegacy/sixteen?style=for-the-badge"/></a>
   <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/stargazers"><img loading="lazy" src="https://img.shields.io/github/stars/ArtisanROM/ExtremeROM-UltraLegacy?style=for-the-badge"/></a>
   <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/graphs/contributors"><img loading="lazy" src="https://img.shields.io/github/contributors/ArtisanROM/ExtremeROM-UltraLegacy?style=for-the-badge"/></a>
-  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/actions/workflows/build-9810.yml"><img loading="lazy" src="https://img.shields.io/github/actions/workflow/status/ArtisanROM/ExtremeROM-UltraLegacy/build-9810.yml?branch=fifteen&style=for-the-badge&logo=githubactions&logoColor=white&label=Build%20ArtisanROM"/>
+  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/actions/workflows/build-9810.yml"><img loading="lazy" src="https://img.shields.io/github/actions/workflow/status/ArtisanROM/ExtremeROM-UltraLegacy/build.yml?branch=sixteen&style=for-the-badge&logo=githubactions&logoColor=white&label=Build%20ArtisanROM"/>
   </a>
 </p>
 
 <p align="center">ArtisanROM Ultra is a work-in-progress custom firmware for Samsung Galaxy devices.</p>
 <p align="center">
   <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/wiki">📖 Wiki</a>
-  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/blob/fifteen/MAINTAINERS.md">🧑‍💻 Maintainers</a>
+  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/blob/sixteen/MAINTAINERS.md">🧑‍💻 Maintainers</a>
 </p>
 
 # What is ArtisanROM Ultra?
@@ -27,7 +27,7 @@ Any form of contribution, suggestions, bug report or feature request for the pro
 
 # Features
 - Based on the latest stable OneUI 8 Galaxy S25 FE firmware
-- All software features from S25 Ultra
+- All software features from S25 FE
 - S25 Ultra CSC, ringtones and more
 - Moderately Debloated
 - Heavily DeKnoxed
