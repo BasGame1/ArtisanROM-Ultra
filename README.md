@@ -1,47 +1,44 @@
+# All Exynos 9810 devices are EOL for now
+### Now pls be patient as we just discovered my dad has cancer. so gimme time for one ui 8
 <h1 align="center">
-  <img loading="lazy" src="readme-res/banner.png"/>
+  <img loading="eager" src="readme-res/banner.png"/>
 </h1>
 <p align="center">
-  <a href="https://github.com/ExtremeXT/ExtremeROM/blob/fifteen/LICENSE"><img loading="lazy" src="https://img.shields.io/github/license/ExtremeXT/ExtremeROM?style=for-the-badge&logo=github"/></a>
-  <a href="https://github.com/ExtremeXT/ExtremeROM/commits/fifteen"><img loading="lazy" src="https://img.shields.io/github/last-commit/ExtremeXT/ExtremeROM/fifteen?style=for-the-badge"/></a>
-  <a href="https://github.com/ExtremeXT/ExtremeROM/stargazers"><img loading="lazy" src="https://img.shields.io/github/stars/ExtremeXT/ExtremeROM?style=for-the-badge"/></a>
-  <a href="https://github.com/ExtremeXT/ExtremeROM/graphs/contributors"><img loading="lazy" src="https://img.shields.io/github/contributors/ExtremeXT/ExtremeROM?style=for-the-badge"/></a>
+  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/blob/fifteen/LICENSE"><img loading="lazy" src="https://img.shields.io/github/license/ArtisanROM/ExtremeROM-UltraLegacy?style=for-the-badge&logo=github"/></a>
+  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/commits/fifteen"><img loading="lazy" src="https://img.shields.io/github/last-commit/ArtisanROM/ExtremeROM-UltraLegacy/fifteen?style=for-the-badge"/></a>
+  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/stargazers"><img loading="lazy" src="https://img.shields.io/github/stars/ArtisanROM/ExtremeROM-UltraLegacy?style=for-the-badge"/></a>
+  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/graphs/contributors"><img loading="lazy" src="https://img.shields.io/github/contributors/ArtisanROM/ExtremeROM-UltraLegacy?style=for-the-badge"/></a>
+  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/actions/workflows/build-9810.yml"><img loading="lazy" src="https://img.shields.io/github/actions/workflow/status/ArtisanROM/ExtremeROM-UltraLegacy/build-9810.yml?branch=fifteen&style=for-the-badge&logo=githubactions&logoColor=white&label=Build%20ArtisanROM"/>
+  </a>
 </p>
-<p align="center">ExtremeROM Nexus is a work-in-progress custom firmware for Samsung Galaxy devices.</p>
 
+<p align="center">ArtisanROM Ultra is a work-in-progress custom firmware for Samsung Galaxy devices.</p>
 <p align="center">
-  <a href="https://t.me/extremerom">💬 Telegram</a>
-  <a href="https://github.com/ExtremeXT/ExtremeROM/wiki">📖 Wiki</a>
-  <a href="https://github.com/ExtremeXT/ExtremeROM/blob/fifteen/CHANGELOG.md">📝 Changelog</a>
-  <a href="https://github.com/ExtremeXT/ExtremeROM/blob/fifteen/MAINTAINERS">🧑‍💻 Maintainers</a>
+  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/wiki">📖 Wiki</a>
+  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/blob/fifteen/MAINTAINERS.md">🧑‍💻 Maintainers</a>
 </p>
 
-# What is ExtremeROM Nexus?
-ExtremeROM Nexus is a work-in-progress custom firmware for Samsung Galaxy devices. It's based on the latest and greatest iteration of Samsung's UX and it also includes additional features and tweaks to ensure the best possible experience out of the box.
-It is based on the UN1CA build system which allows automatic downloading/extraction of the firmware, applying the required patches and generating a flashable zip package for the specified target device.
-ExtremeROM Nexus supports devices using the Exynos 9820, Exynos 990, Exynos 2100 and Exynos 2200 SoCs
+# What is ArtisanROM Ultra?
+ArtisanROM Ultra is a work-in-progress custom firmware for Samsung Galaxy devices based on ExtremeROM. It's based on the latest and greatest iteration of Samsung's UX and it also includes additional features and tweaks to ensure the best possible experience out of the box.
+It is based on the UN1CA build system which allows automatic downloading/extraction of the firmware, applying the required patches and generating a flashable zip/tar package for the specified target device.
+ArtisanROM Ultra will support the M33 5G running an Exynos 1280 SoC
 
 Any form of contribution, suggestions, bug report or feature request for the project will be welcome.
 
 # Features
-- Based on the latest stable OneUI 7 Galaxy S24 FE firmware
-- All software features from S24 FE
+- Based on the latest stable OneUI 8 Galaxy S25 FE firmware
+- All software features from S25 Ultra
 - S25 Ultra CSC, ringtones and more
 - Moderately Debloated
 - Heavily DeKnoxed
 - Full SELinux Support
 - Full Galaxy AI support
-- Completely upstreamed kernels for all officially supported devices
 - Now Brief Support
 - Adaptive color tone support
 - Super HDR support
 - Adaptive Brightness support
 - Full CSC support
-- Adaptive Refresh Rate support (for some models)
 - Multi-User support
-- AppLock support
-- EroFS partitions
-- Stock models in Settings and user apps
 - High end animations
 - Native/live blur support
 - Debloated from useless system services/additional apps
@@ -50,10 +47,9 @@ Any form of contribution, suggestions, bug report or feature request for the pro
 - Extra mods (Disable Secure Flag, OutDoor mode, more coming soon)
 - Extra CSC features (Call recording, Network speed in status bar, 5GHz Hotspot)
 - Countless other small optimizations
-- More that I can't remember right now and will have to be added in the future
 
 # Bugs
-See the <a href="https://github.com/ExtremeXT/ExtremeROM/issues">⚠ Issues</a> tab
+See the <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/issues">⚠ Issues</a> tab
 
 # Licensing
 This project is licensed under the terms of the [GNU General Public License v3.0](LICENSE). External dependencies might be distributed under a different license, such as:
@@ -84,6 +80,15 @@ This project is licensed under the terms of the [GNU General Public License v3.0
 ```
 
 # Credits
+- **[ExtremeXT](https://github.com/ExtremeXT)** - For the ExtremeROM the base of this repo and the inspiration to start android porting.
+- **[Salvo Giangreco](https://github.com/salvogiangri)** - For the the UN1CA build system.
+- **[Yacine](https://github.com/Yacinegti-DZ)** - For all the support, recomendations, The Amazing banner and more!
+- **[ElVettorato](https://github.com/gabrl12345678900)** - For testing ArtisanROM Ultra on his star2lte (S9+).
+- **[Oskar](https://github.com/osrott61-gh)** - For making PR #2 to fix the README and the One UI 8 apps mod
+- **[Rust-Arcee/Amber](https://github.com/Rust-Arcee)** - For all the support
+- I forgot the rest. I lost most my braincells with my 200+ commits in the fork lol. place an issue if I forgot you 
+
+# Original ExtremeROM credits:
 A big thanks goes to the following for their invaluable contributions in no particular order (MORE INFO AND PEOPLE: TO BE WRITTEN)
 - **[salvogiangri](https://github.com/salvogiangri)** for the UN1CA build system, OneUI patches, and general help and support while developing
 - **[Ocin4Ever](https://github.com/Ocin4Ever)** for a lot of help especially on smali, advice and emotional support :D
@@ -104,19 +109,17 @@ A big thanks goes to the following for their invaluable contributions in no part
 - **Nhat Vo** for Google Telemetry app removal
 - **[Code Malaya](https://github.com/jomiejoshiro)** for SPen Air Actions
 - **[Renox](https://github.com/renoxtv)** for overlay patches and testing
-- **[Ksawlii](https://github.com/Ksawlii)** for updating the build system and FOD animation patch
+- **[Ksawlii](https://github.com/Ksawlii)** for FOD animation patch
 - **[nalz0](https://github.com/nalz0)** for Multi-User support
 - **[EndaDwagon](https://github.com/EndaDwagon)** for the big majority of the ExtremeROM Wiki
-- **[Oskar](https://github.com/osrott61-gh)** for Odinpacks, Building before we started using CI, Wiki
-- **[Mesazane](https://github.com/Mesazane)** for Building before we started using CI
+- **[Oskar](https://github.com/osrott61-gh)** N20/S22 Odinpacks, Building alot before we started using actions, some parts of the Wiki
+- **[Mesazane](https://github.com/Mesazane)** for Building alot before we started using actions
 - **[Dupa](https://github.com/dupazlasu)** for Maintaining S22 Series (ROM + Kernel)
 - **[RayShocker](https://github.com/RayShocker)** for HRM fix
-- **[Szucsy92](https://github.com/Szucsy92)** for SingleTake fix
-- **[Kurt](https://github.com/kurtbahartr)** for ASCII art and some minor fixes
 - **@april865** (TG) for ExtremeROM Nexus banner
 - And everyone else who aided in testing, wiki, translations etc!
 
-Original UN1CA credits:
+# Original UN1CA credits:
 - **[ShaDisNX255](https://github.com/ShaDisNX255)** for his help, time and for his [NcX ROM](https://github.com/ShaDisNX255/NcX_Stock) which inspired this project
 - **[DavidArsene](https://github.com/DavidArsene)** for his help and time
 - **[paulowesll](https://github.com/paulowesll)** for his help and support
@@ -126,15 +129,5 @@ Original UN1CA credits:
 - **[LineageOS Team](https://www.lineageos.org/)** for their original [OTA updater implementation](https://github.com/LineageOS/android_packages_apps_Updater)
 - *All the UN1CA project contributors and testers ❤️*
 
-# Kernel sources and device trees
-- 9820 Kernel Source Code (Maintainer: @ExtremeXT): https://github.com/ExtremeXT/M62-backport
-- 9820 Device Tree Code (Maintainer: @ExtremeXT): https://github.com/ExtremeXT/android_device_samsung_exynos9820
-- 990 Kernel Source Code (Maintainer: @ExtremeXT): https://github.com/ExtremeXT/990_upstream_v2
-- 990 Device Tree Code (Maintainer: @ExtremeXT): https://github.com/ExtremeXT/android_device_samsung_exynos9820
-- 2100 Kernel Source Code (Maintainer: @xfwdrev/@maximusXZ): https://github.com/xfwdrev/android_kernel_samsung_ex2100
-- 2100 Device Tree Code (Maintainer: @xfwdrev/@maximusXZ): https://github.com/xfwdrev/android_device_samsung_exynos2100
-- 2200 Kernel Source Code (Maintainer: @dupazlasu): https://github.com/ExtremeXT/android_kernel_samsung_s5e9925
-- 2200 Device Tree Code (Maintainer: @dupazlasu): https://github.com/dupazlasu/android_device_samsung_s5e9925
-
 # Stargazers over time
-[![Stargazers over time](https://starchart.cc/ExtremeXT/ExtremeROM.svg)](https://starchart.cc/ExtremeXT/ExtremeROM)
+[![Stargazers over time](https://starchart.cc/ArtisanROM/ExtremeROM-UltraLegacy.svg)](https://starchart.cc/ArtisanROM/ExtremeROM-UltraLegacy)
