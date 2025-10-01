@@ -1,4 +1,3 @@
-# All Exynos 9810 devices are EOL for now
 ### Now pls be patient as we just discovered my dad has cancer. so gimme time for one ui 8
 <h1 align="center">
   <img loading="eager" src="readme-res/banner.png"/>
