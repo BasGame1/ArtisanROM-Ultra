@@ -1,10 +1,3 @@
-KERNELSU_MANAGER_APK="https://github.com/KernelSU-Next/KernelSU-Next/releases/download/v1.1.1/KernelSU_Next_v1.1.1_12851-release.apk"
-# https://github.com/tiann/KernelSU/issues/886
-APK_PATH="system/preload/KernelSU-Next/com.rifsxd.ksunext-mesa==/base.apk"
-
-LOG "- Adding KernelSU-Next.apk to preload apps"
-mkdir -p "$WORK_DIR/system/$(dirname "$APK_PATH")"
-DOWNLOAD_FILE "$KERNELSU_MANAGER_APK" "$WORK_DIR/system/$APK_PATH"
 
 sed -i "/system\/preload/d" "$WORK_DIR/configs/fs_config-system"
 sed -i "/system\/preload/d" "$WORK_DIR/configs/file_context-system"

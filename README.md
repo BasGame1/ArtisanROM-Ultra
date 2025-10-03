@@ -138,7 +138,7 @@ This project is licensed under the terms of the [GNU General Public License v3.0
 - **[Yacine](https://github.com/Yacinegti-DZ)** - For all the support, recomendations, The Amazing banner and more!
 - **[ElVettorato](https://github.com/gabrl12345678900)** - For testing ArtisanROM Ultra on his star2lte (S9+).
 - **[Oskar](https://github.com/osrott61-gh)** - For making PR #2 to fix the README and the One UI 8 apps mod
-- **[Rust-Arcee/Amber](https://github.com/Rust-Arcee)** - For all the support
+- **[Boyan](https://github.com/Ghost)** - For all the support and massive help
 - I forgot the rest. I lost most my braincells with my 200+ commits in the fork lol. place an issue if I forgot you 
 
 # Original ExtremeROM credits:

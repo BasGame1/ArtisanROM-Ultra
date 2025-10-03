@@ -26,8 +26,6 @@ if [[ "$SOURCE_PRODUCT_FIRST_API_LEVEL" != "$TARGET_PRODUCT_FIRST_API_LEVEL" ]];
     system/framework/services.jar/smali/com/android/server/enterprise/hdm/HdmVendorController.smali
     system/framework/services.jar/smali/com/android/server/enterprise/hdm/HdmSakManager.smali
     system/framework/services.jar/smali/com/android/server/knox/dar/ddar/ta/TAProxy.smali
-    system/framework/services.jar/smali_classes2/com/android/server/power/PowerManagerUtil.smali
-    system/framework/services.jar/smali_classes2/com/android/server/sepunion/EngmodeService\$EngmodeTimeThread.smali
     "
     for f in $FTP; do
         sed -i \
@@ -72,8 +70,8 @@ if [[ "$SOURCE_FP_SENSOR_CONFIG" != "$TARGET_FP_SENSOR_CONFIG" ]]; then
     FTP="
     system/framework/framework.jar/smali_classes2/android/hardware/fingerprint/FingerprintManager.smali
     system/framework/framework.jar/smali_classes2/android/hardware/fingerprint/HidlFingerprintSensorConfig.smali
-    system/framework/framework.jar/smali_classes5/com/samsung/android/bio/fingerprint/SemFingerprintManager.smali
-    system/framework/framework.jar/smali_classes5/com/samsung/android/bio/fingerprint/SemFingerprintManager\$Characteristics.smali
+    system/framework/framework.jar/smali_classes6/com/samsung/android/bio/fingerprint/SemFingerprintManager.smali
+    system/framework/framework.jar/smali_classes6/com/samsung/android/bio/fingerprint/SemFingerprintManager\$Characteristics.smali
     system/framework/framework.jar/smali_classes6/com/samsung/android/rune/InputRune.smali
     system/priv-app/SecSettings/SecSettings.apk/smali_classes4/com/samsung/android/settings/biometrics/fingerprint/FingerprintEntry.smali
     system/priv-app/SecSettings/SecSettings.apk/smali_classes4/com/samsung/android/settings/biometrics/fingerprint/FingerprintLockSettings.smali
