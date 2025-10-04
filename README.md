@@ -7,7 +7,7 @@
   <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/commits/sixteen"><img loading="lazy" src="https://img.shields.io/github/last-commit/ArtisanROM/ExtremeROM-UltraLegacy/sixteen?style=for-the-badge"/></a>
   <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/stargazers"><img loading="lazy" src="https://img.shields.io/github/stars/ArtisanROM/ExtremeROM-UltraLegacy?style=for-the-badge"/></a>
   <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/graphs/contributors"><img loading="lazy" src="https://img.shields.io/github/contributors/ArtisanROM/ExtremeROM-UltraLegacy?style=for-the-badge"/></a>
-  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/actions/workflows/build-9810.yml"><img loading="lazy" src="https://img.shields.io/github/actions/workflow/status/ArtisanROM/ExtremeROM-UltraLegacy/build.yml?branch=sixteen&style=for-the-badge&logo=githubactions&logoColor=white&label=Build%20ArtisanROM"/>
+  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/actions/workflows/build-9810.yml"><img loading="lazy" src="https://img.shields.io/github/actions/workflow/status/ArtisanROM/ArtisanROM-Ultra/build.yml?branch=sixteen&style=for-the-badge&logo=githubactions&logoColor=white&label=Build%20ArtisanROM"/>
   </a>
 </p>
 
