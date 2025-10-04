@@ -2,6 +2,9 @@
 
 ## ArtisanROM:
 
+## Exynos 1280
+- M: Android-Artisan (No TG)
+
 ### Exynos 9810
 - M: Android Artisan (No TG)
 
