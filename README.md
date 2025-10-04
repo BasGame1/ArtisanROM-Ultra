@@ -1,4 +1,3 @@
-### Now pls be patient as we just discovered my dad has cancer. so gimme time for one ui 8
 <h1 align="center">
   <img loading="eager" src="readme-res/banner.png"/>
 </h1>
@@ -26,7 +25,7 @@ Any form of contribution, suggestions, bug report or feature request for the pro
 
 # Features
 - Based on the latest stable OneUI 8 Galaxy S25 FE firmware
-- All software features from S25 FE
+- All software features from S25 Ultra
 - S25 Ultra CSC, ringtones and more
 - Moderately Debloated
 - Heavily DeKnoxed
