@@ -65,6 +65,7 @@ jobs:
 
       - name: Extract source firmware
         run: |
+          sudo chmod 777 out/fw
           source ./buildenv.sh ${{ matrix.target }}
           ./scripts/extract_fw.sh --force --ignore-target
 
@@ -75,6 +76,7 @@ jobs:
 
       - name: Extract target firmware
         run: |
+          sudo chmod 7777 out/fw
           source ./buildenv.sh ${{ matrix.target }}
           ./scripts/extract_fw.sh --force --ignore-source
 
