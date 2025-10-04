@@ -1,4 +1,4 @@
-name: Build ExtremeROM
+name: Build ArtisanROM
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [m33x]
+        target: [y2s, r12s, m33x]
 
     steps:
       - name: Checkout repo
