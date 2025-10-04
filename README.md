@@ -3,18 +3,18 @@
   <img loading="eager" src="readme-res/banner.png"/>
 </h1>
 <p align="center">
-  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/blob/sixteen/LICENSE"><img loading="lazy" src="https://img.shields.io/github/license/ArtisanROM/ExtremeROM-UltraLegacy?style=for-the-badge&logo=github"/></a>
-  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/commits/sixteen"><img loading="lazy" src="https://img.shields.io/github/last-commit/ArtisanROM/ExtremeROM-UltraLegacy/sixteen?style=for-the-badge"/></a>
-  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/stargazers"><img loading="lazy" src="https://img.shields.io/github/stars/ArtisanROM/ExtremeROM-UltraLegacy?style=for-the-badge"/></a>
-  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/graphs/contributors"><img loading="lazy" src="https://img.shields.io/github/contributors/ArtisanROM/ExtremeROM-UltraLegacy?style=for-the-badge"/></a>
-  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/actions/workflows/build-9810.yml"><img loading="lazy" src="https://img.shields.io/github/actions/workflow/status/ArtisanROM/ArtisanROM-Ultra/build.yml?branch=sixteen&style=for-the-badge&logo=githubactions&logoColor=white&label=Build%20ArtisanROM"/>
+  <a href="https://github.com/ArtisanROM/ArtisanROM-Ultra/blob/sixteen/LICENSE"><img loading="lazy" src="https://img.shields.io/github/license/ArtisanROM/ArtisanROM-Ultra?style=for-the-badge&logo=github"/></a>
+  <a href="https://github.com/ArtisanROM/ArtisanROM-Ultra/commits/sixteen"><img loading="lazy" src="https://img.shields.io/github/last-commit/ArtisanROM/ArtisanROM-Ultra/sixteen?style=for-the-badge"/></a>
+  <a href="https://github.com/ArtisanROM/ArtisanROM-Ultra/stargazers"><img loading="lazy" src="https://img.shields.io/github/stars/ArtisanROM/ArtisanROM-Ultra?style=for-the-badge"/></a>
+  <a href="https://github.com/ArtisanROM/ArtisanROM-Ultra/graphs/contributors"><img loading="lazy" src="https://img.shields.io/github/contributors/ArtisanROM/ArtisanROM-Ultra?style=for-the-badge"/></a>
+  <a href="https://github.com/ArtisanROM/ArtisanROM-Ultra/actions/workflows/build.yml"><img loading="lazy" src="https://img.shields.io/github/actions/workflow/status/ArtisanROM/ArtisanROM-Ultra/build.yml?branch=sixteen&style=for-the-badge&logo=githubactions&logoColor=white&label=Build%20ArtisanROM"/>
   </a>
 </p>
 
 <p align="center">ArtisanROM Ultra is a work-in-progress custom firmware for Samsung Galaxy devices.</p>
 <p align="center">
-  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/wiki">📖 Wiki</a>
-  <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/blob/sixteen/MAINTAINERS.md">🧑‍💻 Maintainers</a>
+  <a href="https://github.com/ArtisanROM/ArtisanROM-Ultra/wiki">📖 Wiki</a>
+  <a href="https://github.com/ArtisanROM/ArtisanROM-Ultra/blob/sixteen/MAINTAINERS.md">🧑‍💻 Maintainers</a>
 </p>
 
 # What is ArtisanROM Ultra?
@@ -48,7 +48,7 @@ Any form of contribution, suggestions, bug report or feature request for the pro
 - Countless other small optimizations
 
 # Bugs
-See the <a href="https://github.com/ArtisanROM/ExtremeROM-UltraLegacy/issues">⚠ Issues</a> tab
+See the <a href="https://github.com/ArtisanROM/ArtisanROM-Ultra/issues">⚠ Issues</a> tab
 
 # Licensing
 This project is licensed under the terms of the [GNU General Public License v3.0](LICENSE). External dependencies might be distributed under a different license, such as:
