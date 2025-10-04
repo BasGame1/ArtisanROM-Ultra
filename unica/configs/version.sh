@@ -21,6 +21,6 @@ VERSION_PATCH=0
 
 ROM_VERSION="${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}"
 # Append current commit hash to version name
-ROM_VERSION+=" "
+ROM_VERSION+=""
 
 ROM_CODENAME="Ultra"
