@@ -1,6 +1,11 @@
 # ArtisanROM Ultra changelog
 
-# 0.5.0
+# 1.0.0
+- Switched to S25 FE
+- Update to OneUI 8.0
+- General bugfixes
+
+## 0.5.0
 - Switched to S25U firmware
 - General bugfixes
 
