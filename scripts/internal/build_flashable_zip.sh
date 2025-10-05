@@ -586,7 +586,7 @@ PRINT_HEADER()
     echo    '");'
     echo    'ui_print("ArtisanROM developed by Android-Artisan @XDAforums");'
     echo    'ui_print("Initial UN1CA and ExtremeROM build system coded by salvo_giangri and ExtremeXT @XDAforums");'
-    echo    'ui_print("Special thanks to all ArtisanROM Maintainers, Contribuitors and Testers");'
+    echo    'ui_print("Special thanks to all ExtremeROM and ArtisanROM Maintainers, Contribuitors and Testers");'
     echo    'ui_print("****************************************************");'
     echo -n 'ui_print("'
     echo -n "One UI version: $ONEUI_VERSION"
