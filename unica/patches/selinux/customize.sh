@@ -42,6 +42,12 @@ qb_id_prop
 teeregistryd_app
 "
 
+# One UI 4.1 additions
+ENTRIES+="
+perf_prop
+qb_id_prop
+"
+
 # [
 GET_SYSTEM_EXT()
 {
