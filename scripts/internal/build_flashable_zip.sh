@@ -639,34 +639,34 @@ done < <(find "$WORK_DIR" -maxdepth 1 -type d)
 LOG_STEP_OUT
 
 # shellcheck disable=SC2046
-wait $(jobs -p) || exit 1
+#wait $(jobs -p) || exit 1
 
-if [ "$TARGET_SUPER_PARTITION_SIZE" -ne 0 ]; then
-    LOG "- Building unsparse_super_empty.img"
-    BUILD_SUPER_EMPTY
+#if [ "$TARGET_SUPER_PARTITION_SIZE" -ne 0 ]; then
+ #   LOG "- Building unsparse_super_empty.img"
+  #  BUILD_SUPER_EMPTY
 
-    LOG "- Generating dynamic_partitions_op_list"
-    GENERATE_OP_LIST
-fi
+   # LOG "- Generating dynamic_partitions_op_list"
+    #GENERATE_OP_LIST
+#fi
 
-BROTLI_QUALITY=6
-$DEBUG && BROTLI_QUALITY=0
+#BROTLI_QUALITY=6
+#$DEBUG && BROTLI_QUALITY=0
 
-while IFS= read -r f; do
-    PARTITION="$(basename "$f" | sed "s/.img//g")"
-    IS_VALID_PARTITION_NAME "$PARTITION" || continue
+#while IFS= read -r f; do
+ #   PARTITION="$(basename "$f" | sed "s/.img//g")"
+  #  IS_VALID_PARTITION_NAME "$PARTITION" || continue
 
-    (
-        LOG "- Converting $PARTITION.img to $PARTITION.new.dat"
-        EVAL "img2sdat -o \"$TMP_DIR\" \"$f\"" || exit 1
-        rm -f "$f"
+   # (
+    #    LOG "- Converting $PARTITION.img to $PARTITION.new.dat"
+     #   EVAL "img2sdat -o \"$TMP_DIR\" \"$f\"" || exit 1
+      #  rm -f "$f"
 
-        LOG "- Compressing $PARTITION.new.dat"
+       # LOG "- Compressing $PARTITION.new.dat"
         # https://android.googlesource.com/platform/build/+/refs/tags/android-15.0.0_r1/tools/releasetools/common.py#3585
-        EVAL "brotli --quality=\"$BROTLI_QUALITY\" --output=\"$TMP_DIR/$PARTITION.new.dat.br\" \"$TMP_DIR/$PARTITION.new.dat\"" || exit 1
-        rm -f "$TMP_DIR/$PARTITION.new.dat"
-    ) &
-done < <(find "$TMP_DIR" -maxdepth 1 -type f -name "*.img")
+#        EVAL "brotli --quality=\"$BROTLI_QUALITY\" --output=\"$TMP_DIR/$PARTITION.new.dat.br\" \"$TMP_DIR/$PARTITION.new.dat\"" || exit 1
+ #       rm -f "$TMP_DIR/$PARTITION.new.dat"
+  #  ) &
+#done < <(find "$TMP_DIR" -maxdepth 1 -type f -name "*.img")
 
 # shellcheck disable=SC2046
 wait $(jobs -p) || exit 1
@@ -684,19 +684,6 @@ if [ -f "$WORK_DIR/up_param.bin" ]; then
     cp -fa "$WORK_DIR/up_param.bin" "$TMP_DIR/up_param.bin"
 fi
 
-LOG "- Generating updater-script"
-GENERATE_UPDATER_SCRIPT
-
-LOG "- Generating build_info.txt"
-GENERATE_BUILD_INFO
-
-LOG "- Generating OTA metadata"
-GENERATE_OTA_METADATA
-
-LOG "- Creating zip"
-EVAL "rm -f \"$OUT_DIR/rom.zip\"" || exit 1
-pushd "$TMP_DIR" > /dev/null
-
 # 1. Compressed files (everything except zips, special dat files, META-INF)
 find . -type f ! -name "*.new.dat.br" ! -name "*.patch.dat" > compressed.txt
 
@@ -708,12 +695,68 @@ META_INF="./META-INF"
 EVAL "7z a -tzip -mx=9 -mmt=$(nproc --all) \"$TMP_DIR/rom.zip\" @\"compressed.txt\""
 EVAL "7z a -tzip -mx=0 -mmt=$(nproc --all) \"$TMP_DIR/rom.zip\" @\"stored.txt\" \"$META_INF\""
 
-if ! $DEBUG; then
-    LOG "- Signing zip"
-    EVAL "signapk -w \"$PUBLIC_KEY_PATH\" \"$PRIVATE_KEY_PATH\" \"$TMP_DIR/rom.zip\" \"$OUT_DIR/$FILE_NAME\"" || exit 1
-    rm -f "$TMP_DIR/rom.zip"
+LOG "- Generating OTA metadata"
+GENERATE_OTA_METADATA
+
+LOG "- Generating updater-script"
+GENERATE_UPDATER_SCRIPT
+
+#build super.img
+LOG "- Copying generated .img files and META-INF directory to img directory"
+mkdir -p "out/img"
+find "$TMP_DIR" -maxdepth 1 -name "*.img" -exec cp -v {} "out/img/" \; 2>/dev/null || echo "No .img files found to copy"
+[ -d "$TMP_DIR/META-INF" ] && cp -rv "$TMP_DIR/META-INF" "out/img/" || echo "META-INF directory not found"
+
+LOG "- Creating super.img from partition images"
+
+SYSTEM_SIZE="$(GET_IMAGE_SIZE "out/img/system.img")"
+VENDOR_SIZE="$(GET_IMAGE_SIZE "out/img/vendor.img")"
+PRODUCT_SIZE="$(GET_IMAGE_SIZE "out/img/product.img")"
+ODM_SIZE="$(GET_IMAGE_SIZE "out/img/odm.img")"
+BUFFER_SIZE=$((1024 * 1024 * 10))
+TOTAL_SIZE=$((SYSTEM_SIZE + VENDOR_SIZE + PRODUCT_SIZE + ODM_SIZE))
+SUPER_SIZE=$((TOTAL_SIZE + METADATA_SIZE * METADATA_SLOTS + BUFFER_SIZE))
+ALIGNED_SUPER_SIZE=$(( (SUPER_SIZE + 4095) / 4096 * 4096 ))
+
+# Create super.img
+lpmake \
+    --metadata-size 65536 \
+    --metadata-slots 2 \
+    --device super:$ALIGNED_SUPER_SIZE \
+    --group main:0 \
+    --partition system:readonly:$SYSTEM_SIZE:main --image system="out/img/system.img" \
+    --partition vendor:readonly:$VENDOR_SIZE:main --image vendor="out/img/vendor.img" \
+    --partition product:readonly:$PRODUCT_SIZE:main --image product="out/img/product.img" \
+    --partition odm:readonly:$ODM_SIZE:main --image odm="out/img/odm.img" \
+    --sparse \
+    --output "out/img/super.img"
+
+if [ -f "out/img/super.img" ]; then
+    LOG "Created super.img with size: $(du -h "out/img/super.img" | cut -f1)"
+    
+    #convert to super.new.dat.br
+    LOG "- Converting super.img to super.new.dat"
+    img2sdat -o "out/img" "out/img/super.img" || exit 1
+    
+    COMPRESSION_LEVEL=0
+    ! $DEBUG && COMPRESSION_LEVEL=6
+    
+    LOG "- Compressing super.new.dat"
+    
+    # https://android.googlesource.com/platform/build/+/refs/tags/android-15.0.0_r1/tools/releasetools/common.py#3585
+    EVAL "brotli --quality=\"$COMPRESSION_LEVEL\" --output=\"out/img/super.new.dat.br\" \"out/img/super.new.dat\"" || exit 1
+    rm -f "out/img/super.new.dat"
+fi
+
+#create zip and upload
+if [ -d "out/img/META-INF" ] && [ -f "out/img/super.new.dat.br" ] && \
+   [ -f "out/img/super.patch.dat" ] && [ -f "out/img/super.transfer.list" ]; then
+    cd "out/img" && \
+    zip -r -9 nerv.zip META-INF super.new.dat.br super.patch.dat super.transfer.list && \
+    curl -sSL https://raw.githubusercontent.com/elohim-etz/GoFile-Upload/main/upload.sh | bash -s -- nerv.zip
+    cd - > /dev/null 
 else
-    mv -f "$TMP_DIR/rom.zip" "$OUT_DIR/$FILE_NAME"
+    echo "Required files for nerv.zip not found"
 fi
 
 popd > /dev/null
